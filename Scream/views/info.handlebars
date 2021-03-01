@@ -1,0 +1,137 @@
+<html lang="en">
+
+<head>
+    <link href="../posts.css" rel="stylesheet">
+       
+    <meta charset="UTF-8">
+        <title>{{username}}</title>
+       
+        <style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: rgb(95, 135, 73);
+            background-image: url("https://videojs.com/static/forest-hero-dc9ccb8e885c34c8377ec1af2b3cf268.svg");
+            background-repeat: no-repeat;
+            background-position: center top;
+        }
+        
+        .smart-green {
+            margin: 50px auto;
+            max-width: 500px;
+            background: #F8F8F8;
+            padding: 30px 30px 20px 30px;
+            font: 18px Arial, Helvetica, sans-serif;
+            color: #666;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+        }
+
+        .smart-green h1 {
+            font: 28px "Trebuchet MS", Arial, Helvetica, sans-serif;
+            padding: 20px 0px 20px 40px;
+            display: block;
+            margin: -52px -30px 10px -30px;
+            color: #FFF;
+            background: #9DC45F;
+            text-shadow: 1px 1px 1px #949494;
+            border-radius: 5px 5px 0px 0px;
+            -webkit-border-radius: 5px 5px 0px 0px;
+            -moz-border-radius: 5px 5px 0px 0px;
+            border-bottom: 1px solid #89AF4C;
+        }
+
+        .smart-green h1>span {
+            display: block;
+            font-size: 12px;
+            color: #FFF;
+        }
+
+        .smart-green label {
+            display: block;
+            margin: 0px 0px 5px;
+        }
+
+        .smart-green label>span {
+            float: left;
+            margin-top: 10px;
+            margin-left: 2px;
+            color: #5E5E5E;
+        }
+
+        .smart-green input[type="text"],
+        .smart-green input[type="email"],
+        .smart-green textarea {
+            color: rgb(143, 142, 142);
+            height: 30px;
+            line-height: 15px;
+            width: 100%;
+            padding: 0px 0px 0px 10px;
+            margin-top: 5px;
+            border: 1px solid #E5E5E5;
+            border-radius: 5%/15%;
+            outline: 0;
+            -webkit-box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+            box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+            font: normal 15px/15px Arial, Helvetica, sans-serif;
+            background-color: #ddf796;
+        }
+
+        .smart-green textarea {
+            height: 100px;
+            padding-top: 10px;
+        }
+
+
+        .smart-green .button {
+            background-color: #9DC45F;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-border-radius: 5px;
+            border: none;
+            padding: 10px 25px 10px 25px;
+            color: #FFF;
+            text-shadow: 1px 1px 1px #949494;
+        }
+
+        .smart-green .button:hover {
+            background-color: #80A24A;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/info_revised" method="post" class="smart-green">
+        {{#each info}}
+            <h1>个人信息
+                <span>请留下你的信息.</span>
+            </h1>
+
+            <label>
+                <span>姓名 :</span>
+                <input id="name" type="text" value='{{this.username}}' name="name" class="error" disabled='disabled' />
+            </label>
+
+            <label>
+                <span>性别 :</span>
+                <input id="gender" type="text" value="{{this.gender}}" name="gender" />
+            </label>
+
+            <label>
+                <span>邮箱 :</span>
+                <input id="email" type="email" value="{{this.email}}" name="email" />
+            </label>  
+
+            <label>
+                <span>个人介绍 :</span>
+                <textarea id="intro" name="intro" value="{{this.intro}}">{{this.intro}}</textarea>
+            </label>
+            
+            <input type="submit" class="button" value="保存" />
+        {{/each}}
+        {{!--     <input type='hidden' name='csrfmiddlewaretoken' value='SfHkbL4feo1G00sJQtbO7TtLN4c2BUwa' /> --}}
+    </form>
+
+</body>
+</html>

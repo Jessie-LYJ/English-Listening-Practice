@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    
+    <link href="https://vjs.zencdn.net/7.5.5/video-js.css" rel="stylesheet" />
+  
+    <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <style>
+        body {
+            background-color:#ffffff;
+        }
+        
+        #quiz{
+            text-align: center;
+            margin: 50px auto;
+            padding: 5px;
+            /*border: 3px red solid;  */      
+        }
+
+        input[type="button"] {
+            display: inline-block;
+            font-size: auto;
+            text-align: center;
+            margin-left: 2em;
+            width: 550px;
+            height: 80px;
+            color: #435065;
+            background-color: rgb(255, 255, 255);
+            border-width: 3px;
+            border-style: solid;
+            border-color: rgb(95, 135, 73);
+            border-image: initial;
+            border-radius: 100px;
+            box-shadow: 0 0.125rem 0.125rem 0 rgba(0,0,0,.1);
+            transition: all 0.2s ease-out 0s; 
+            /*border:.0625rem solid #007531; */  
+        }
+
+        input[type="button"]:hover {
+            background-color: rgb(95, 135, 73);
+            color:beige;
+        }
+        
+        .video-js {
+            color: #ccda46; /*rgb(95, 135, 73)*/
+            font-size: 12px;           
+            width: 800px;
+            height: 450px;
+            margin: 30px auto 40px;
+        }
+
+        .vjs-default-skin .vjs-big-play-button {
+            font-size: 3em;
+            line-height: 1.5em;
+            height: 1.5em;
+            width: 3em;
+            border: 3px solid #ccda46;
+            border-radius: 0.6em;
+        }
+
+        .video-js .vjs-big-play-button {
+            background-color: #fcf7cd;
+            background-color: rgba(#fcf7cd, 0.7);
+        }
+
+        .video-js .vjs-big-play-button:before {
+            font-size: 4.5em;
+        }
+
+        .vjs-paused .vjs-big-play-button {
+            display: block;
+        }
+
+        .video-js .vjs-control-bar {
+            display: none;
+        }
+        
+        /*
+        #goPage {
+            position: absolute;
+            z-index: 6;
+            top: 46%;
+            right: 20%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            opacity: 0.1;
+            transition:all ease 1s;
+        }
+
+        #goPage:hover {
+            opacity: 1;
+        }
+
+        button {
+            display: inline-flex;
+            width: 5rem;
+            height: 3rem;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+            padding-right: 1.5rem;
+            padding-left: 1.5rem;
+            border: 0;
+            border-bottom-left-radius: 1.875rem;
+            border-top-left-radius: 1.875rem;
+            color: #ccda46;
+            cursor: pointer;
+            font-size: 2rem;
+            background-color: #fcf7cd;
+        }
+        */
+
+        .title-next {
+            width: 100%;
+            height: 1.5em;
+            text-align: left;
+            margin: 0 5px;
+        }
+        
+        .next-btn {
+            height: 100%;
+            float: right;
+        }
+
+        #goPage {
+            width: 5rem;
+            height: 2.5rem;
+            margin-top: 120%;
+            margin-right: 130px;
+            color: #ccda46;
+            cursor: pointer;
+            font-size: 2rem;
+            background-color: #fcf7cd;
+            border: 3px double rgb(95, 135, 73);
+            border-radius: 30%;
+        }
+
+        #goPage:hover {
+            background-color: rgb(95, 135, 73);
+            color: beige;
+            border: 3px beige double;
+        }
+        
+
+        h2 {
+            display: inline-block;
+            padding: 7px;
+            margin-left: 30px;
+            border:5px beige double;
+            border-radius: 32%;
+            color: beige;
+            background-color: rgb(95, 135, 73);
+            font-family: "Marker Felt", "Comic Sans MS", fantasy;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="quiz">
+        <div class="title-next">
+            <h2 id="progress">Question x of y</h2>
+            <div class="next-btn"><button id="goPage">>></button></div>
+        </div>       
+        <div id="panel"></div>        
+    </div>
+    
+    <script src={{js}}></script>   
+    <script src="https://vjs.zencdn.net/7.5.5/video.js"></script>    
+</body>
+
+</html>

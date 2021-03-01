@@ -1,0 +1,213 @@
+html,body,body div,nav,form,ul,li,footer{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+    background: transparent;
+    font-family: "Microsoft YaHei","宋体","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif, FreeSans, Arimo;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: url("images/leaf.png");
+    background-repeat: repeat;
+    background-position: center top;
+}
+
+.main {
+    width: 80%;
+    height: 100%;
+    margin: 55px auto;
+    /* border: 3px red solid; */
+}
+
+input[type='text'] {
+    width: 80%;
+    height: 2em;
+    overflow: hidden;
+    font-size: 15px;
+    border: 2px #fda77f dashed;
+}
+
+textarea {
+    width: 95%;
+    height: 12em;
+    overflow: auto;
+    font-size: 15px;
+    margin: 15px auto;
+    border: 2px #fda77f dashed;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #004445;
+    width: 100%;
+    height: 3em;
+}
+
+li{
+    margin: 10px;
+    list-style: none;
+    display:inline-block;
+    background: #0a4e53;    
+}
+
+nav li a {
+    font-size: 1em;
+    font-family: "Marker Felt", "Comic Sans MS", fantasy;
+    font-weight: normal;
+    color:white;
+    text-decoration: none;
+    padding: 12px;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+nav a:hover {
+    background-color: #008B8B;
+}
+
+li a, .main h2 a, #delete a {
+    text-decoration: none;
+}
+
+#delete a,.post-name, .post-time {
+    padding: 3px;
+    color: #fda77f;
+    font-family: "Marker Felt", "Comic Sans MS", fantasy;
+}
+
+.controls {
+    /* border: 2px blue solid; */
+    width: 100%;
+    height: 1.5em;
+    text-align: right;
+}
+.post-name{
+    height: 100%;
+    float:left
+}
+
+#delete {
+    /* border: 2px red solid; */
+    height: 100%;
+    float: right;
+}
+
+.post-time {
+    /* border: 2px green solid; */
+    height: 100%;
+    display: inline-block;
+    margin: -2px 20px;
+}
+
+.footer-distributed{
+    display: block;
+    /* position:fixed;
+    bottom: 0;
+    left: 0; */
+    width: 100%;
+	background-color: #004445;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif; 
+	padding: 5px 50px;
+	margin-top: 80px;
+}
+
+.footer-distributed h5 {
+    margin: 5px auto;
+    text-align: center;
+    color: white;
+}
+
+hr {
+    border:1px #ff9d76 dotted;
+}
+
+.main h1 {
+    color: white;
+    background-color: #fda77f;
+    font-family: "Marker Felt", "Comic Sans MS", fantasy;
+    padding: 25px 20px;
+    margin: 0 auto 10px;
+    text-align: center;
+}
+
+.post-contents {
+    /* border:3px red solid; */
+    float: right;
+    width: 25%;
+    padding: 10px 15px;
+    background-color: #fff1cf;
+}
+
+.post-contents h2 {
+    text-align: left;
+    color: #e26241;
+    background-color: #ffffff;
+    font-family: "Marker Felt", "Comic Sans MS", fantasy;
+    padding: 5px 10px;
+    width: 75%;
+    border-radius: 20px;
+}
+
+.showposts {
+    /*border:3px green solid;*/
+    width: 70%;
+    padding: 10px 0;
+}
+
+.show-each-post {
+    margin: 25px 10px;
+}
+
+.showposts a {
+    color: #004445;
+}
+
+.showposts a:hover {
+    color: #ff9d76;
+}
+
+input[type='submit'] {
+    width:100%;
+    font-size: 18px;
+    padding: 7px;
+    margin: 5px 0;
+    /* border: 2px double #004456; */
+    background-color: #2c786c;
+    border-radius: 20px;
+    color: white;
+    font-family: "Marker Felt", "Comic Sans MS", fantasy;
+}
+
+#username{
+    float:right;
+    font-family: "Marker Felt", "Comic Sans MS", fantasy;
+    color: white;
+}
+
+
+
+
+.reply-name {
+    height: 100%;
+    float: left;
+    color: white;
+    background-color: #83b582;
+    font-family: "Marker Felt", "Comic Sans MS", fantasy;
+    font-size: 1.2em;
+    padding: 2px 5px;
+    border-radius: 10px;
+}
+

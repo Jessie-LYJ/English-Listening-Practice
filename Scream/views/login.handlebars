@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scream!</title>
+    <style>
+        .main {
+            display: flex;
+            flex-flow: row wrap;
+            /*border: 1px solid red;*/
+            position: absolute; 
+            top: 50%;   
+            left: 50%;  
+            -webkit-transform: translate(-50%, -50%);   
+            -moz-transform: translate(-50%, -50%);   
+            -ms-transform: translate(-50%, -50%);   
+            -o-transform: translate(-50%, -50%);   
+            transform: translate(-50%, -50%); 
+            width: 85%;
+            height: 85%;
+            align-items: center;
+            justify-content: space-around;
+            /*margin: -250px 0 0 110px;
+            margin: auto;   
+            margin-top: 40px;
+            width: 1050px;
+            height: 550px;
+            margin-top: -290px;
+            margin-left: -600px;
+            */
+        }
+        
+        .main > * {
+            flex: 1 100%;
+            padding: 5px;
+        }
+
+        /* Medium screens */
+        @media all and (min-width: 600px) {
+        /* We tell both login to share a row */
+            .login { flex: 1 0 0; }
+        }
+
+        .login-all-images {
+            /*float: left;*/
+            /*width: 550px;*/
+            margin: 10px 30px;
+            display: inline;
+            border: 3px rgb(255, 150, 167) double;
+            border-radius: 50%;
+        }
+        
+        #logo {
+            position: relative;
+            width: 80%;
+            top: 33px;
+            margin-left: -17px;
+        }
+        
+        #login-bg {    
+            width: 100%;
+        }
+        
+        .login-box {
+            display: inline;
+            border: 8px solid #004456;
+            border-radius: 40px;
+            margin: 10px 35px;
+            /*float: right; 
+            width: 450px;*/
+        }
+
+        .login-box h1 {
+            font-family: "Marker Felt", "Comic Sans MS", fantasy;
+            font-size: 2.5em;
+            color: #004456;
+            text-align: center;
+            margin: 25px 25px;
+        }
+        
+        form {
+            /*border: 1px solid red;*/
+            margin: 25px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 93%;
+            overflow: hidden;
+            font-size: 20px;
+            padding: 8px 13px;
+            margin: 10px auto;
+            border: 2px double #004456;
+            background-color: #0a4e53;
+            border-radius: 20px;
+            color:aliceblue;
+        }
+
+        input[type="submit"] {
+            width:100%;
+            overflow: hidden;
+            font-size: 20px;
+            padding: 8px 13px;
+            margin: 10px 0;
+            border: 2px double #004456;
+            background-color: white;
+            border-radius: 20px;
+            color: #004456;
+        }
+
+        input::-webkit-input-placeholder {
+            color:white;
+        }
+        input::-moz-placeholder {
+            /* Mozilla Firefox 19+ */
+            color: white;
+        }
+        input:-moz-placeholder {
+            /* Mozilla Firefox 4 to 18 */
+            color: white;
+        }
+        input:-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: white;
+        }
+
+        label {
+            color: red;
+            padding: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+<div class="main">
+    
+    <div class="login login-all-images">
+        <div class="logo-image"><img id="logo" src="images/logo.png"></div>
+        <!--logo地址：https://document-export.canva.cn/DADsMrb_OYI/70/thumbnail/0002-51491518.png-->
+        <div class="login-image"><img id="login-bg" src="images/logo-login.png"></div>
+        <!--logo背景图片地址为：https://document-export.canva.cn/DADsODwcknM/428/thumbnail/0004-51487480.png-->
+    </div>
+
+    <div class="login login-box">
+        <h1>Login ~·~</h1>
+        <form action="/login" method="post">
+            <input type="text" name="username2" placeholder="User Name"><br>
+            <input type="password" name="password2" placeholder="Password"><br>
+            <label for="">{{message}}</label><br>
+            <input type="submit" value="LOGIN">
+            <p>No account? <a href="/register">Register </a>first!</p>
+        </form>   
+    </div>
+
+</div>
+
+</body>
+</html>
